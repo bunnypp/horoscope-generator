@@ -105,7 +105,7 @@ def generate_horoscope(sign, starter_text, length):
 
     curr_sign = sign
 
-    df = pd.read_json('version2/dataset2/'+ curr_sign +'.json')
+    df = pd.read_json('dataset2/'+ curr_sign +'.json')
     corpus = list(df["text"])
 
     # generate sequences
@@ -115,7 +115,7 @@ def generate_horoscope(sign, starter_text, length):
     predictors, label, max_sequence_len = generate_padded_sequences(inp_sequences, total_words)
 
     # load models
-    model = KM.load_model("version2/Models/model2-" + curr_sign + ".h5")
+    model = KM.load_model("Models/model2-" + curr_sign + ".h5")
 
     generated_text = generate_text(starter_text, length, model, max_sequence_len, tokenizer)
 
