@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+    <link rel="icon" href="{{ url_for('static', filename='icon.png') }}" />
+    <title>BunnySpeaks</title>
+
+</head>
+<body>
+    <h1>BUNNY SPEAKS</h2>
+    <div class="box center">
+        <h2>{{sign}}</h2>
+        <div class="column left">
+            <img src="/static/bunny.png" alt="Bunny" width = "200" height="200" class="ver-center">
+        </div>
+        <div class="column right">
+            <div class="flex2">
+                <div class="textbox">
+                    <p>{{text}}</p>
+                </div>
+                <div class="textbox2">
+                    <form action="/">
+                        <button type="submit" class="btn">Back</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
