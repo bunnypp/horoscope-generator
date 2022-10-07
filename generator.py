@@ -32,6 +32,7 @@ import pandas as pd
 import numpy as np
 import string, os
 import random
+import gc
 
 import warnings
 warnings.filterwarnings("ignore")
