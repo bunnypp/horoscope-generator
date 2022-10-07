@@ -92,6 +92,10 @@ def generate_text(seed_text, next_words, model, max_sequence_len, tokenizer):
                 output_word = word
                 break
         seed_text += " "+ output_word
+        
+        KBE.clear_session()
+        gc.collect()
+        
     return seed_text.title()
 
 # # Generating text with the saved models
