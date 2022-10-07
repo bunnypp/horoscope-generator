@@ -94,8 +94,8 @@ def generate_text(seed_text, next_words, model, max_sequence_len, tokenizer):
                 break
         seed_text += " "+ output_word
         
-        KBE.clear_session()
         gc.collect()
+        KBE.clear_session()
         
     return seed_text.title()
 
