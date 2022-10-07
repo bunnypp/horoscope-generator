@@ -31,6 +31,7 @@ seed(1)
 import pandas as pd
 import numpy as np
 import string, os
+import random
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -119,3 +120,8 @@ def generate_horoscope(sign, starter_text, length):
     generated_text = generate_text(starter_text, length, model, max_sequence_len, tokenizer)
 
     return generated_text
+
+def get_input(sign):
+    inputs = ["Today", "You", sign, "Consider", "Your", "The", "When", "Be",
+            "A", "It", "This", "I"]
+    return random.sample(inputs, 1)[0]

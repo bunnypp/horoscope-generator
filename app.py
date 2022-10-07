@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from generator import generate_horoscope
+from generator import generate_horoscope, get_input
 
 app = Flask(__name__)
 
@@ -23,7 +23,7 @@ def index():
 @app.route("/horoscope", methods=['POST'])
 def getSign():
     sign = request.form["sign"]
-    input = "Today"
+    input = get_input(sign)
     text = generate_horoscope(sign, input, 70)
     return render_template('horoscope.html', sign=sign, text=text)
 
