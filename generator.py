@@ -84,5 +84,5 @@ def generate_horoscope(sign, starter_text, length):
 
 def get_input(sign):
     inputs = ["Today", "You", sign, "Consider", "Your", "The", "When", "Be",
-            "A", "It", "This", "I"]
+            "A", "It", "This", "There"]
     return random.sample(inputs, 1)[0]
