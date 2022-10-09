@@ -136,6 +136,7 @@ button {
     margin-top: 10px;
 }
 .btn {
+    background-color: white;
     border-width: 4px;
     border-style: solid;
     border-image: linear-gradient(45deg, #FFC839, #B55088) 1;
